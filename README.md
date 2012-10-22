@@ -1,6 +1,6 @@
-=Panucci's Pizza=
+# Panucci's Pizza #
 
-==Instructions==
+## Instructions ##
 Try to complete as many of the features as are described in the explanation below.
 
 Fill in incomplete methods found in `lib/pizzaria.rb`.  You may add an classes, methods, modules, or other code as you see fit, but you may not modify the other files in the project.
@@ -8,7 +8,7 @@ Fill in incomplete methods found in `lib/pizzaria.rb`.  You may add an classes, 
 The program can be run by typing *ruby pizzaria.rb*.  A menu system has been implemented to get you started.  Class `Pizzaria` has an instance of `Terminal` in the member variable `@terminal`. 
 You may find its methods useful for displaying messages or collecting input apart from the menu interface.  You are not limited to it, however, and are free to use STDIN and STDOUT directly if you prefer.
 
-==Explanation==
+## Explanation ##
 Panucci’s Pizza has always done pizza the old fashioned way.  But after his last pizza delivery boy disappeared after a New Year’s Eve delivery run, Pannucci decided he couldn’t count on unreliable employees to do things right.  He decided to replace all the fuss behind the counter with an automated system to handle everything, from point-of-sale to inventory tracking.  
 
 Panucci sells pizzas in the three classic sizes: small, medium, and large.  A small cheese pizza costs $4.15, a medium $6.15, and a large costs $8.15.  Toppings are $2 each, except for pineapple which changes seasonally: in the spring and summer it costs $1.75, in fall and winter $2.50.  For medium and large pizzas, the first topping is only 1 dollar, except pineapple in off season months.  
@@ -17,7 +17,7 @@ Panucci also sells Pizza by the slice.  He keeps 4 kinds of pizza for sale by th
 
 Finally, Panucci sells soft drinks in a one-size-fits-all cup for $1.75.  
 
-===Point of Sale===
+### Point of Sale ###
 Up until now, Panucci has relied on his employees to do the math by hand.  Though he can’t be sure, Panucci suspects that his employees, being the dim sort, often got it wrong.  
 Panucci needs point of sale to do the following things:
 
@@ -30,7 +30,7 @@ Panucci needs point of sale to do the following things:
 
 
 
-===Inventory Monitoring===
+### Inventory Monitoring ###
 Panucci’s vision for his retooled pizzeria is to be able to monitor everything from the front counter.  He wants to know his stock of ingredients, how his by-the-slice pizzas are doing, and the status of pizzas waiting to go into the oven.
 
 Panucci keeps track of the following ingredients that he needs to restock when they run low: flour, cheese, pizza sauce, seasoning, as well as a separate tally for each topping.  
