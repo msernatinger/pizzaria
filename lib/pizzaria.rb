@@ -8,6 +8,9 @@ class Pizzaria < InteractiveShop
   def add_pizza
   end
 
+  def add_slice
+  end
+
   def add_soft_drink
   end
 

@@ -6,15 +6,17 @@ class Terminal
     @menu = menu
   end
 
-  def print_menu
+  def clear_screen
     system("clear")
-    puts @menu.show_screen
   end
 
-  def get_command
+  def display(str)
+    puts str
+  end
+
+  def get_numeric_command
     print "> "
-    @number_key_press = get_input
-    @command = @menu.select_option(@number_key_press)
+    @number_key_press = get_input.to_i
   end
 
   def execute_command
@@ -24,7 +26,7 @@ class Terminal
   private 
 
   def get_input
-    gets.chomp.to_i
+    gets.chomp
   end
 
 end

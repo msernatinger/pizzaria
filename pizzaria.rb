@@ -85,6 +85,9 @@ menu = TerminalMenu.builder do
 
 end
 
+Pizzaria.config do |config|
+  config.menu = menu
+end
 
 terminal = Terminal.new(menu)
 Pizzaria.new(terminal).run
