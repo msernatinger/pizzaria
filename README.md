@@ -21,12 +21,12 @@ Finally, Panucci sells soft drinks in a one-size-fits-all cup for $1.75.
 Up until now, Panucci has relied on his employees to do the math by hand.  Though he can’t be sure, Panucci suspects that his employees, being the dim sort, often got it wrong.  
 Panucci needs point of sale to do the following things:
 
-    It should compute the total charge for the order, including New York City’s sales tax of 8.875%.
-    It should round off fractions of a cent.
-    It should accept cash and plastic.  No checks at Panucci’s.
-    It should update bill and coin counts for the cash drawer.
-    If cash was tendered, it should compute the change
-    It should print a receipt with the line items, the total, tendered, and change.  It should also print the date and a six-digit order number so that customers can’t try to re-use a receipt to get free pizza.
+    * It should compute the total charge for the order, including New York City’s sales tax of 8.875%.
+    * It should round off fractions of a cent.
+    * It should accept cash and plastic.  No checks at Panucci’s.
+    * It should update bill and coin counts for the cash drawer.
+    * If cash was tendered, it should compute the change
+    * It should print a receipt with the line items, the total, tendered, and change.  It should also print the date and a six-digit order number so that customers can’t try to re-use a receipt to get free pizza.
 
 
 
@@ -41,12 +41,12 @@ Finally, Panucci needs to manage the queue for his ovens.  Panucci has 2 ovens w
 
 Panucci’s inventory monitoring system should do the following:
 
-    It should let him query for total slices of each kind of pizza by the slice
-    It should let him query for inventory totals
-    It should update inventory totals when a pizza is assembled
-    When an oven is free, it should tell him which pizzas to put in next, based on the rules above
-    It should tell him which pizzas are ready, which are in the oven, and which are waiting to go in the oven.  
-    It should tell him what order each pizza belongs to, or whether it is to be sold by the slice.
+    * It should let him query for total slices of each kind of pizza by the slice
+    * It should let him query for inventory totals
+    * It should update inventory totals when a pizza is assembled
+    * When an oven is free, it should tell him which pizzas to put in next, based on the rules above
+    * It should tell him which pizzas are ready, which are in the oven, and which are waiting to go in the oven.  
+    * It should tell him what order each pizza belongs to, or whether it is to be sold by the slice.
 
 
 Panucci has said that he is fine with querying constantly for times.  However, if you wanted to impress the old pizza maker, you could add alerts on the screen when oven timers ring. 
