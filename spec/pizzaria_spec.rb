@@ -6,6 +6,7 @@ describe Pizzaria do
   it { should be_a Pizzaria }
 
   context "order with a large cheese pizza" do
+    
 
     describe "display_order" do
       

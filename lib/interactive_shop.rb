@@ -1,6 +1,7 @@
 class InteractiveShop
 
   attr_accessor :terminal
+  attr_accessor :command_result
 
   def self.config 
     yield self
@@ -14,7 +15,15 @@ class InteractiveShop
     @terminal = terminal
   end
 
+  def display_result
+    @terminal.display(command_result)
+    command_result.clear
+    @terminal.clear_screen_on_keystroke
+  end
+
   def run
+    @terminal.display("Welcome to Panucci's!  v0.1")
+    @terminal.clear_screen_on_keystroke
     while 1 do
       @terminal.clear_screen
       @terminal.display(@@menu.show_screen)
