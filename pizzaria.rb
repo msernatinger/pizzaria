@@ -11,6 +11,7 @@ menu = TerminalMenu.builder do
     title "Welcome to Panucci's Computerized Management System"
     menu_item "New Order", :new_order, :start_new_order
     menu_item "Inventory", :inventory
+    menu_item "Manage Ovens", :ovens
     menu_item "Exit", :exit, :system_quit
   end
 
@@ -27,6 +28,13 @@ menu = TerminalMenu.builder do
     menu_item "View Ingredients On-Hand", :inventory_listing, :list_inventory
     menu_item "Re-Stock Ingredients", :restock_listing, :order_ingredient
     menu_item "Go Back", :welcome
+  end
+
+  menu_screen :ovens do
+    title "Manage Ovens"
+    menu_item "Check Timers", :ovens, :check_oven_timers
+    menu_item "Remove Pizzas", :ovens, :remove_pizzas_from_oven
+    menu_item "Place Pizzas", :ovens, :place_pizzas_in_oven
   end
 
   menu_screen :inventory_listing do
