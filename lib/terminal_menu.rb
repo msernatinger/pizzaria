@@ -2,6 +2,7 @@
 class TerminalMenu
 
   attr_accessor :screens
+  attr_reader :last_selection
 
   def initialize
     @screens = {}
@@ -22,9 +23,10 @@ class TerminalMenu
 
   def select_option item_number
     selection = current_screen[:menu_items][item_number]
+    last_selection = [item_number, selection]
     @current_screen = selection[:next_menu]
     return selection[:command]
-  end 
+  end
 
   def self.builder &block
     menu = self.new
@@ -34,6 +36,10 @@ class TerminalMenu
 
   protected
 
+  def last_selection= val
+    @selection = val
+  end
+
   def current_screen
     raise "No screens have been defined" if @screens.empty?
     screen_id = @current_screen || @screens.first[0]
@@ -41,7 +47,7 @@ class TerminalMenu
   end
 
   def menu_screen name, &block
-    @screen_to_build = {menu_items: []}
+    @screen_to_build = {name: name, menu_items: []}
     instance_eval &block
     @screens[name] = @screen_to_build
   end

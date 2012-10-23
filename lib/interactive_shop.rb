@@ -11,6 +11,10 @@ class InteractiveShop
     @@menu = menu
   end
 
+  def self.menu
+    @@menu
+  end
+
   def initialize(terminal = nil)
     @terminal = terminal
   end
@@ -19,6 +23,10 @@ class InteractiveShop
     @terminal.display(command_result)
     command_result.clear
     @terminal.clear_screen_on_keystroke
+  end
+
+  def last_menu_selection
+    @@menu.last_selection
   end
 
   def run
@@ -35,9 +43,7 @@ class InteractiveShop
   end
 
   def handle_command(command)
-
-    self.send(command) 
-
+    exit if command == :system_quit
   end
 
 end
